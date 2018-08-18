@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">E-Bill</string>
+    <string name="date_time">Date Time</string>
+    <string name="idno">idNo</string>
+    <string name="type_of_work">TypeOfWork</string>
+    <string name="status">status</string>
+    <string name="name">name</string>
+    <string name="money">money</string>
+</resources>

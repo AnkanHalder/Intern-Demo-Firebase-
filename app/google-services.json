@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "798727258234",
+    "firebase_url": "https://ebill-bdb2e.firebaseio.com",
+    "project_id": "ebill-bdb2e",
+    "storage_bucket": "ebill-bdb2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798727258234:android:7f6dd42707a11937",
+        "android_client_info": {
+          "package_name": "com.example.jiraiya.e_bill"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798727258234-ngjvg379q02j7sqpqboe2st29vjhv5dg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jiraiya.e_bill",
+            "certificate_hash": "0ea665661dcb51347fc0a01ecf64a3cab3fe342c"
+          }
+        },
+        {
+          "client_id": "798727258234-jh7bvmqg37nt7bj05j7m7ilv1m15b65f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-HbhHNyf_11K5WHIUnYVvZoSfKd57j84"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798727258234-jh7bvmqg37nt7bj05j7m7ilv1m15b65f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
