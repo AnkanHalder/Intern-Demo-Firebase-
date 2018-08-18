@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         orders = new ArrayList<>();
         ordersAdapter = new MyOrderAdapter(orders, this);
         orderRecyclerView.setAdapter(ordersAdapter);
+
     }
 
     @Override

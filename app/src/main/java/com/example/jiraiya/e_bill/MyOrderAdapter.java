@@ -1,12 +1,15 @@
 package com.example.jiraiya.e_bill;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -42,16 +45,39 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.OrderHol
 
     //Called after the ViewHolder(OrderHolder) Object is created and populates with the data
     @Override
-    public void onBindViewHolder(@NonNull OrderHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final OrderHolder holder, int position) {
 
-        GetSetMyOrder order = orders.get(position);
+        final GetSetMyOrder order = orders.get(position);
 
         holder.date_time.setText(order.getDateTime());
         holder.status.setText(order.getStatus());
+        if(order.getStatus().equals("Cancelled")) {
+            holder.status.setTextColor(Color.RED);
+
+        }else if(order.getStatus().equals("In Progress")){
+
+            holder.status.setTextColor(Color.BLUE);
+        }
+        else if(order.getStatus().equals("Pending")){
+            holder.status.setTextColor(Color.YELLOW);
+        }
+        else {
+            holder.status.setTextColor(Color.GREEN);
+        }
         holder.type_of_work.setText(order.getTypeOfWork());
         holder.id_no.setText(order.getIdNo());
         holder.money.setText(order.getMoney());
         holder.name.setText(order.getName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goDetails = new Intent(context,Details.class);
+                goDetails.putExtra("ID",order.getIdNo());
+                context.startActivity(goDetails);
+                Toast.makeText(context, order.getIdNo(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
