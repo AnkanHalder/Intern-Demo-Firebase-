@@ -1,0 +1,145 @@
+{
+  "Data" : {
+    "BN:65715" : {
+      "address" : "Moti Dev Mallick 79, Gulab Apartments, Borivali Kota - 365604  Phone: +91 42 24452233  Birthday: 1965-06-27  Email: aruna73@kapadia.co.in",
+      "dateTime" : "Mon,Dec 04,11:45 AM",
+      "discount" : "",
+      "endTime" : "",
+      "grandTotal" : "Rs.0",
+      "jobassign" : "Job Not Yet Assigned",
+      "paymentStatus" : "Pending",
+      "rate" : "Rs.500-Rs.2000 Per Hour",
+      "serviceLocation" : "Home",
+      "servicerequired" : "Make up,Dressing",
+      "startTime" : "",
+      "status" : "Cancelled",
+      "taxcgst" : "Null",
+      "taxsgst" : "Null",
+      "totalTime" : "",
+      "typeOfWork" : "Beauty"
+    },
+    "BN:66154" : {
+      "address" : "Ishat Chowdhury 21, Cyber City, Faridabad - 498677  Phone: +91 030 3289223  Birthday: 1947-12-18  Email: hkaul@hotmail.com",
+      "dateTime" : "Mon,Dec 04,11:45 AM",
+      "discount" : "",
+      "endTime" : "",
+      "grandTotal" : "Rs.0",
+      "jobassign" : "Job Not Yet Assigned",
+      "paymentStatus" : "Pending",
+      "rate" : "Rs.1000-Rs.3000 Per Hour",
+      "serviceLocation" : "Home",
+      "servicerequired" : "(Drinking) Water, Sewage and Drainage",
+      "startTime" : "",
+      "status" : "Cancelled",
+      "taxcgst" : "Null",
+      "taxsgst" : "Null",
+      "totalTime" : "",
+      "typeOfWork" : "Plumber"
+    },
+    "BN:66177" : {
+      "address" : "Gubbi Thotadappa Rd, Kempegowda, Gandhi Nagar,Bengaluru,Karnataka 560009,India",
+      "dateTime" : "Mon,Dec 04,11:45 AM",
+      "discount" : "",
+      "endTime" : "",
+      "grandTotal" : "Rs.0",
+      "jobassign" : "Job Not Yet Assigned",
+      "paymentStatus" : "Pending",
+      "rate" : "Rs.50-Rs.200 Per Hour",
+      "serviceLocation" : "Office",
+      "servicerequired" : "Fan,light & switch repair",
+      "startTime" : "",
+      "status" : "In Progress",
+      "taxcgst" : "Null",
+      "taxsgst" : "Null",
+      "totalTime" : "",
+      "typeOfWork" : "Electrician"
+    },
+    "BN:66178" : {
+      "address" : "Gubbi Thotadappa Rd, Kempegowda, Gandhi Nagar,Bengaluru,Karnataka 560009,India",
+      "dateTime" : "Mon,Dec 04,11:45 AM",
+      "discount" : "",
+      "endTime" : "",
+      "grandTotal" : "Rs.250",
+      "jobassign" : "Job Not Yet Assigned",
+      "paymentStatus" : "Completed",
+      "rate" : "Rs.50-Rs.200 Per Hour",
+      "serviceLocation" : "Office",
+      "servicerequired" : "Fan,light & switch repair",
+      "startTime" : "",
+      "status" : "Completed",
+      "taxcgst" : "Null",
+      "taxsgst" : "Null",
+      "totalTime" : "",
+      "typeOfWork" : "Electrician"
+    },
+    "BN:66179" : {
+      "address" : "Gubbi Thotadappa Rd, Kempegowda, Gandhi Nagar,Bengaluru,Karnataka 560009,India",
+      "dateTime" : "Mon,Dec 04,11:45 AM",
+      "discount" : "",
+      "endTime" : "",
+      "grandTotal" : "Rs.0",
+      "jobassign" : "Job Not Yet Assigned",
+      "paymentStatus" : "Pending",
+      "rate" : "Rs.50-Rs.200 Per Hour",
+      "serviceLocation" : "Office",
+      "servicerequired" : "Fan,light & switch repair",
+      "startTime" : "",
+      "status" : "Pending",
+      "taxcgst" : "Null",
+      "taxsgst" : "Null",
+      "totalTime" : "",
+      "typeOfWork" : "Electrician"
+    }
+  },
+  "Users" : {
+    "User1" : {
+      "Orders" : {
+        "Order-BN:65715" : {
+          "dateTime" : "Wed,Oct 25,11:45 AM",
+          "idNo" : "BN:65715",
+          "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/ebill-bdb2e.appspot.com/o/beauty.jpg?alt=media&token=816fe718-af40-4510-a7b9-60776bbc0bab",
+          "money" : "",
+          "name" : "",
+          "status" : "Cancelled",
+          "typeOfWork" : "Beauty"
+        },
+        "Order-BN:66154" : {
+          "dateTime" : "Thu,Nov 30,03:30 PM",
+          "idNo" : "BN:66154",
+          "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/ebill-bdb2e.appspot.com/o/plumb.jpg?alt=media&token=17509fe0-c8f5-42b5-9df0-153e6b3e2ffd",
+          "money" : "",
+          "name" : "",
+          "status" : "Cancelled",
+          "typeOfWork" : "Plumber"
+        },
+        "Order-BN:66177" : {
+          "dateTime" : "Mon,Dec 04,11:00 AM",
+          "idNo" : "BN:66177",
+          "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/ebill-bdb2e.appspot.com/o/elect.jpg?alt=media&token=89d6a3b4-418d-42fd-b343-f7ca7be3d273",
+          "money" : "",
+          "name" : "Rohan",
+          "status" : "In Progress",
+          "typeOfWork" : "Electrician"
+        },
+        "Order-BN:66178" : {
+          "dateTime" : "Mon,Dec 04,11:30 AM",
+          "idNo" : "BN:66178",
+          "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/ebill-bdb2e.appspot.com/o/elect.jpg?alt=media&token=89d6a3b4-418d-42fd-b343-f7ca7be3d273",
+          "money" : "Rs.250",
+          "name" : "Rohan",
+          "status" : "Completed",
+          "typeOfWork" : "Electrician"
+        },
+        "Order-BN:66179" : {
+          "dateTime" : "Mon,Dec 04,11:45 AM",
+          "idNo" : "BN:66179",
+          "imgUrl" : "https://firebasestorage.googleapis.com/v0/b/ebill-bdb2e.appspot.com/o/elect.jpg?alt=media&token=89d6a3b4-418d-42fd-b343-f7ca7be3d273",
+          "money" : "",
+          "name" : "",
+          "status" : "Pending",
+          "typeOfWork" : "Electrician"
+        }
+      }
+    }
+  }
+}
