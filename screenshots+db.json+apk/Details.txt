@@ -1,0 +1,7 @@
+1) All the tasks which have been told is done.
+
+Extras :-
+
+Added a Broadcast Receiver which would detect Internet
+If No Internet would give a custom error which is designed using Adobe XD.
+
