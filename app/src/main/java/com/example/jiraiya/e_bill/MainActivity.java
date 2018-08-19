@@ -1,12 +1,16 @@
 package com.example.jiraiya.e_bill;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -58,8 +62,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        progressDialog.setMessage("Please wait..");
-        progressDialog.show();
+        if(!isNetworkConnected()){
+            Intent pop =new Intent(MainActivity.this,Popup.class);
+            startActivity(pop);
+        }
+            progressDialog.setMessage("Please wait..");
+            progressDialog.show();
+
 
         child = databaseReference.child("Users").child("User1").child("Orders");
         child.addValueEventListener(new ValueEventListener() {
@@ -67,12 +76,15 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> ordersdb = dataSnapshot.getChildren();
 
+
+
                 for(DataSnapshot dShot : ordersdb){
                     Log.d("Data ", String.valueOf(dShot.child("name")));
                     GetSetMyOrder gso = dShot.getValue(GetSetMyOrder.class);
                     orders.add(gso);
+                    ordersAdapter.notifyDataSetChanged();
                 }
-                ordersAdapter.notifyDataSetChanged();
+
                 progressDialog.dismiss();
 
             }
@@ -85,10 +97,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     @Override
     protected void onPause() {
         super.onPause();
         orders.clear();
         ordersAdapter.notifyDataSetChanged();
+    }
+
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        return cm.getActiveNetworkInfo() != null;
     }
 }

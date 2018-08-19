@@ -8,8 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -62,18 +65,21 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.OrderHol
             holder.status.setTextColor(Color.YELLOW);
         }
         else {
-            holder.status.setTextColor(Color.GREEN);
+            holder.status.setTextColor(Color.parseColor("#008000"));
         }
         holder.type_of_work.setText(order.getTypeOfWork());
         holder.id_no.setText(order.getIdNo());
         holder.money.setText(order.getMoney());
         holder.name.setText(order.getName());
+        Picasso.get().load(order.getImgUrl()).resize(90, 90).centerCrop().placeholder(R.drawable.def).into(holder.workerImg);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent goDetails = new Intent(context,Details.class);
                 goDetails.putExtra("ID",order.getIdNo());
+                goDetails.putExtra("ImgURL",order.getImgUrl());
                 context.startActivity(goDetails);
                 Toast.makeText(context, order.getIdNo(), Toast.LENGTH_SHORT).show();
             }
@@ -93,6 +99,8 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.OrderHol
         public TextView type_of_work;
         public TextView name;
         public TextView money;
+        public ImageView workerImg;
+
 
         public OrderHolder(View itemView) {
             super(itemView);
@@ -104,7 +112,8 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.OrderHol
             id_no = (TextView)itemView.findViewById(R.id.id_no);
             type_of_work = (TextView)itemView.findViewById(R.id.type_of_work);
             name = (TextView)itemView.findViewById(R.id.name);
-            money =(TextView)itemView.findViewById(R.id.money);
+            money = (TextView)itemView.findViewById(R.id.money);
+            workerImg = (ImageView)itemView.findViewById(R.id.imgUrl);
         }
 
     }
